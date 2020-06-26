@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ekoulé Maneng Charly Karl">
+        <meta name="description" content="An Issue Tracker Microservice">
+        <title>Issue-Tracker Microservice</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Tracksue</h1>
+        <p>an issue tracker microservice</p>
+        <hr>
+        <main>
+            <form action="/api/issues/edimocms" method="POST">
+                <h2>Submit a new issue</h2>
+                <input type="text" name="issue_title" placeholder="title *" required>
+                <textarea name="issue_text" cols="30" rows="10" placeholder="description *" required></textarea>
+                <input type="text" name="created_by" placeholder="created by *" required>
+                <input type="text" name="assigned_to" placeholder="assigned to">
+                <input type="text" name="status_text" placeholder="status">
+                <button type="submit">Submit</button>
+            </form>
+            <hr>
+            <form action="/api/issues/edimocms" method="PUT">
+                <h2>Update an issue</h2>
+                <input type="text" name="_id" placeholder="serial number *" required>
+                <input type="text" name="issue_title" placeholder="title">
+                <textarea name="issue_text" cols="30" rows="10" placeholder="description *" required></textarea>
+                <input type="text" name="created_by" placeholder="created by">
+                <input type="text" name="assigned_to" placeholder="assigned to">
+                <input type="text" name="status_text" placeholder="status">
+                <label for="open">Check to close issue<input type="checkbox" name="open" value="false"></label>
+                <button type="submit">Update</button>
+            </form>
+            <hr>
+            <form action="/api/issues/edimocms" method="DELETE">
+                <h2>Delete an issue</h2>
+                <input type="text" name="_id" placeholder="serial number *" required>
+                <button type="submit">Delete</button>
+            </form>
+            <hr>
+            <form action="/api/issues/edimocms" method="GET">
+                <h2>Get issues</h2>
+                <input type="text" name="_id" id="_id" placeholder="serial number">
+                <input type="text" name="issue_title" id="issue_title" placeholder="title">
+                <input type="text" name="created_by" id="created_by" placeholder="created by">
+                <input type="text" name="assigned_to" id="assigned_to" placeholder="assigned to">
+                <label for="created_on_from">created on from</label>
+                <input type="datetime-local" name="created_on_from" id="created_on_from">
+                <label for="created_on_to">created on to</label>
+                <input type="datetime-local" name="created_on_to" id="created_on_to">
+                <label for="updated_on_from">updated on from</label>
+                <input type="datetime-local" name="updated_on_from" id="updated_on_from">
+                <label for="updated_on_to">updated on to</label>
+                <input type="datetime-local" name="updated_on_to" id="updated_on_to">
+                <input type="text" name="status_text" id="status_text" placeholder="status">
+                <label for="open">open or close issue ?</label>
+                <select name="open" id="open">
+                    <option value=""></option>
+                    <option value="true">open</option>
+                    <option value="false">close</option>
+                </select>
+                <button type="submit">Get</button>
+            </form>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "issue-tracker",
+  "author": "Ekoulé Maneng Charly Karl",
+  "version": "0.0.1",
+  "description": "An Issue Tracker Microservice",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.18",
+    "helmet": "^3.23.2",
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "engines": {
+    "node": "10.16.1"
+  }
+}
