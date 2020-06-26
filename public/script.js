@@ -13,7 +13,6 @@ let arr = [issue_title, created_by, assigned_to, created_on_from, created_on_to,
 id.addEventListener('input', () => {
     if (id.value != "") {
         arr.forEach(el => {
-            console.log(el);
             if (el.value != "") el.value = "";
             if (!(el.disabled)) el.disabled = true;
         });
